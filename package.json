@@ -9,7 +9,6 @@
     "bemto.jade": "https://github.com/kizu/bemto",
     "comment-json": "^1.1.3",
     "jquery": "^3.1.0",
-    "owl.carousel": "^2.2.0",
     "svg4everybody": "^2.1.0"
   },
   "devDependencies": {
