@@ -1,0 +1,322 @@
+.tabs-block{
+    color: red;
+
+    &__list{
+        background: #fff;
+        @include list-reset;
+    }
+}
+
+.info-block{
+    @include clearfix;
+
+    &__wrapper{
+        padding:20px 0 0 0;
+        @include above($tablet){
+            border-bottom:1px solid $color-border;
+        }
+        @include above($desctop){
+            height:80px;
+            padding:20px 0;
+        }
+    }
+
+    &__logo{
+        float: left;
+        width: 100%;
+        text-align: center;
+        @include above($tablet){
+            width:auto;
+        }
+
+        &-img{
+            @include bg($logo);
+            display: inline-block;
+        }
+    }
+
+    &__search{
+        float: right;
+        width:100%;
+        position: relative;
+        @include above($tablet){
+            width: 50%;
+        }
+        @include above($desctop){
+            width: 26%;
+        }
+
+
+        &-wrapper{
+            margin-top: 8px;
+        }
+
+        &-input{
+            border:1px solid $color-border;
+            padding: 5px 10px;
+            width:100%;
+            font-size: 14px;
+            background: transparent;
+
+        }
+
+        &-icon{
+            position: absolute;
+            right: 6px;
+            top: 11px;
+            z-index: -1;
+        }
+    }
+
+    &__list{
+        text-align: center;
+        @include list-reset;
+        @include clearfix;
+        margin:0 AUTO;
+        width: 100%;
+        float: left;
+        margin-top: 15px;
+        @include above($tablet){
+            height: 59px;
+            padding-left: 22px;
+        }
+        @include above($desctop){
+            width:50%;
+            margin-top:0;
+            float: none;
+        }
+    }
+
+    &__item{
+        height: 59px;
+        @include above($tablet){
+            margin-right:-5px;
+            display: inline-block;
+        }
+    }
+
+    &__link{
+        color: #000;
+        text-decoration: none;
+        padding:0;
+        height: 60px;
+        line-height:60px;
+        display: block;
+        border:1px solid transparent;
+        border-top:2px solid transparent;
+        transition:color 0.4s;
+        @include above($tablet){
+            padding:9px 13.3px;
+            line-height:normal;
+        }
+
+        &:hover{
+            color: $color-mark;
+        }
+
+        &.active-tabs{
+            border:1px solid $color-border;
+            border-top:2px solid $color-mark;
+            color: $color-mark;
+            @include above($tablet){
+                border-bottom: 1px solid #fff;
+            }
+        }
+    }
+
+    &__content{
+        padding:0 15px;
+        max-width: 1130px;
+        margin: auto;
+    }
+
+    &__panel{
+        display: none;
+        padding:30px 0;
+        text-align: center;
+
+        &.active-tabs{
+            display: block;
+        }
+    }
+}
+
+.slider-index{
+    position: relative;
+    background: url('%=static=%assets/info-block/plane-5.jpg') no-repeat center center;
+    background-size:cover;
+    height: 444px;
+
+
+    &__inner{
+        max-width: 990px;
+        padding: 0 15px;
+        margin: 0 auto;
+        width: 100%;
+        height: 444px;
+        position: relative;
+    }
+
+    .lSSlideWrapper,
+    .lSSlideOuter{
+        height:100%;
+    }
+
+
+
+    &__list{
+        color: #fff;
+        text-align: left;
+        position: absolute;
+        bottom: 67px;
+        left: 0;
+        @include above($tablet){
+            bottom: 80px;
+            left: 79px;
+        }
+
+        .container{
+            max-width:none;
+        }
+
+    }
+
+    &__pic{
+        display: inline-block;
+
+    }
+
+    &__nav{
+        width: 40px;
+        height: 40px;
+        bottom:25px;
+        border-right: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        display: block;
+        position: absolute;
+        cursor: pointer;
+
+        &_type{
+            &_prev{
+                left:80px;
+                transform: rotate(135deg);
+                @include above($tablet){
+                    top: 43%;
+                    left:25px;
+                }
+            }
+
+            &_next{
+                right: 77px;
+                transform: rotate(-45deg);
+                @include above($tablet){
+                    top: 43%;
+                    right:22px;
+                }
+            }
+        }
+    }
+
+    &__trigger{
+        width: 40px;
+        height: 40px;
+        border-right: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        transform: rotate(135deg);
+    }
+
+    &__nav{
+        &-prev{
+            display: block;
+            position: absolute;
+            bottom:25px;
+            left:80px;
+            width: 40px;
+            height: 40px;
+            border-right: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            transform: rotate(135deg);
+            cursor: pointer;
+            @include above($tablet){
+                top: 43%;
+                left:30px;
+            }
+        }
+
+        &-next{
+            display: block;
+            position: absolute;
+            bottom:25px;
+            right: 77px;
+            width: 40px;
+            height: 40px;
+            border-right: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            transform: rotate(-45deg);
+            cursor: pointer;
+            @include above($tablet){
+                top: 43%;
+                right:30px;
+            }
+        }
+    }
+}
+
+.slider-content{
+     line-height: 45px;
+     text-align: center;
+    @include above($tablet){
+        line-height:64px;
+        text-align: left;
+    }
+
+    &__head{
+        font-size:32px;
+        @include above($tablet){
+            font-size:48px;
+        }
+    }
+
+    &__title{
+        font-size:40px;
+        letter-spacing: 7px;
+        text-transform: uppercase;
+        position: relative;
+        display: inline-block;
+        @include above($tablet){
+            font-size:60px;
+            letter-spacing: 7px;
+            max-width: 400px;
+        }
+        @include above($desctop){
+            max-width: none;
+        }
+
+        &:after{
+            @include above($desctop){
+                content: '';
+                display: block;
+                background: url('%=static=%assets/info-block/air.png') no-repeat;
+                width:30px;
+                height:32px;
+                position: absolute;
+                top: -4px;
+                right: -36px;
+            }
+        }
+    }
+
+    &__desc{
+        font-size:14px;
+        text-align: center;
+        line-height: 25px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        @include above($tablet){
+            margin:-4px 0 0 5px;
+            line-height:normal;
+            text-align: left;
+        }
+    }
+ }
+

@@ -11,14 +11,31 @@ html, body {
 }
 
 body{
-  background: #fff;
-  font-size: 16px;
-  font-family:$PTSansRegular;
+    background: #fff;
+    font-size: 16px;
+    font-family:$PTSansRegular;
+    color: #000;
+    overflow-x: hidden;
+    min-width: 320px;
 }
 
 .container{
-  max-width: 990px;
-  padding: 0 15px;
-  margin: 0 auto;
-  width: 100%;
+    max-width: 990px;
+    padding: 0 15px;
+    margin: 0 auto;
+    width: 100%;
+    @include clearfix;
+}
+
+.overlay{
+    z-index: 3;
+    position: fixed;
+    background-color: #000;
+    opacity: 0.7;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    display: none;
 }

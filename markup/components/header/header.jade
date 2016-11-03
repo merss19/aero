@@ -1,4 +1,39 @@
-mixin header(data)
-	+b.header__
-		div(class="container")
-			+e.top
+mixin header()
+	+b.header
+		+e.top
+			div(class="container")
+				+e.left
+					+e('ul').list.lang-block__
+						+e('li').item
+							+e('a').link.main-link(href=jv0) USA site
+						+e('li').item
+							+e('a').link.main-link(href=jv0) Deutsch site
+						+e('li').item
+							| Россия:
+							+e('a').link.main-link.main-link_type_inline-block(href=jv0) Switch to english
+				+e.right.user-block__
+					+e.item
+						+e('a').link.main-link(href=jv0)
+							+e('span').icon!=jadeHelpers.Icon.call(locals, {iconName: 'clock', className: 'svg-clock', iconWidth: '20', iconHeight: '20'})
+							|Онлайн-табло
+					+e('button').item_type_auth.js-modal-btn
+						+e('a').link.main-link(href=jv0) Вход и регистрация
+		//+e.info.info-block__
+			div(class="container")
+				+e.logo
+					+e.logo-img
+				+e.search
+					+e.search-wrapper
+						+e('input').search-input(type="text", placeholder="поиск по сайту")
+						+e.search-icon!=jadeHelpers.Icon.call(locals, {iconName: 'search', className: 'svg-clock', iconWidth: '20', iconHeight: '20'})
+				+e('ul').list#nav-tab
+					+e('li').item
+						+e('a').link.active(href='#opportunity') Возможности
+					+e('li').item
+						+e('a').link(href='#information') Информация
+					+e('li').item
+						+e('a').link(href='#privilege') Привилегии
+				+e.content
+					+e.panel#opportunity.active 1
+					+e.panel#information 2
+					+e.panel#privilege 3

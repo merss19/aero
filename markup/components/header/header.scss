@@ -1,7 +1,82 @@
-.header
-    &__top{
+.header{
+    @include clearfix;
+
+    &__top {
         background: $color-bg;
-        color: $color-font;
+        @include clearfix;
+    }
+
+    &__right{
+        @include above($tablet){
+            float: right;
+        }
+    }
+
+    &__left{
+        @include above($tablet){
+            float: left;
+        }
+
+    }
+}
+
+.lang-block{
+    @include list-reset;
+    margin:0 -15px;
+    text-align: center;
+    @include above($tablet){
+        height: 40px;
+        text-align: left;
+    }
+    
+    &__item{
+        padding:0 15px;
+        line-height: 40px;
+        height:40px;
+        color: #000;
         font-size:12px;
         font-family:$PTSansBold;
+        @include above($tablet){
+            float: left;
+        }
+
     }
+}
+
+.user-block{
+    margin: 0 -20px;
+    @include clearfix;
+    clear: both;
+    text-align: center;
+    @include above($tablet){
+        clear:none;
+    }
+
+    &__item{
+        line-height:40px;
+        padding:0 20px;
+        @include above($tablet){
+            float: left;
+        }
+
+        &_type{
+            &_auth{
+                border: none;
+                background: transparent;
+            }
+        }
+    }
+
+    &__icon{
+        display: inline-block;
+        margin-right: 10px;
+    }
+}
+
+
+
+.svg-clock{
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -5px;
+}

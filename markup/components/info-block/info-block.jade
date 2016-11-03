@@ -1,0 +1,36 @@
+mixin info-block()
+	+b.info-block.js-tabs
+		+e.wrapper
+			div(class="container")
+				+e.logo
+					+e.logo-img
+				+e.search
+					+e.search-wrapper
+						+e('input').search-input(type="text", placeholder="поиск по сайту")
+						+e.search-icon!=jadeHelpers.Icon.call(locals, {iconName: 'search',className: 'svg-clock',iconWidth: '20',iconHeight: '20'})
+				+e('ul').list.js-tabs-nav
+					+e('li').item
+						+e('a').link.active-tabs(href='#opportunity') Возможности
+					+e('li').item
+						+e('a').link(href='#information') Информация
+					+e('li').item
+						+e('a').link(href='#privilege') Привилегии
+		+b.info-block__content
+			+b.info-block__panel#opportunity.active-tabs
+				+b.slider-index
+					+e.inner
+						+e.list
+							+e.item
+								+b.slider-content
+									+e.head Открывайте мир
+									+e.title вместе с Трансаэро
+									+e.desc Почувствуйте комфорт современного Boeing 747-300
+							+e.item
+								+b.slider-content
+									+e.head Открывайте мир
+									+e.title вместе с Трансаэро
+									+e.desc Почувствуйте комфорт современного Boeing 747-300
+						+e.nav_type_prev
+						+e.nav_type_next
+			+b.info-block__panel#information 2
+			+b.info-block__panel#privilege 3

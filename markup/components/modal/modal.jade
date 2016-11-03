@@ -1,0 +1,11 @@
+mixin modal()
+	+b.modal
+		+e('form').form.form__
+			+e.container
+				+e.item
+					+e('input').input(type = "email", placeholder = "Почта" required)
+				+e.item
+					+e('input').input(type = "text", placeholder = "Пароль" required)
+				+e.item_type_btn
+					+e('input').btn(type = "submit", value = "Войти")
+

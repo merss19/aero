@@ -1,0 +1,68 @@
+.modal {
+    position: fixed;
+    top: 20%;
+    right: 0;
+    left: 0;
+    display: none;
+    z-index: 5;
+    padding: 20px 10px;
+    max-width: 300px;
+    //min-width: 320px;
+    margin: auto;
+
+    &__form{
+        background: #fff;
+        border-radius: 7px;
+        padding: 10px 35px 30px;
+        position: relative;
+        z-index: 5;
+    }
+}
+
+.form{
+
+    &__item{
+        margin-top:20px;
+
+        &_type{
+            &_btn{
+                padding-top:30px;
+            }
+        }
+    }
+
+    &__btn{
+        background: $color-mark;
+        color: #fff;
+        width: 100%;
+        padding: 10px;
+        text-transform: uppercase;
+        font-size: 14px;
+        border-radius: 7px;
+        border:1px solid #fff;
+        transition:all 0.4s;
+
+        &:hover{
+            color: $color-mark;
+            background: #fff;
+            border:1px solid $color-mark;
+        }
+    }
+
+    &__input{
+        border: 1px solid #ccc;
+        border-radius: 7px;
+        outline: none;
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+
+        &:invalid {
+            border: 1px solid red;
+        }
+
+        &:valid {
+            border: 1px solid green;
+        }
+    }
+}

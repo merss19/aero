@@ -1,7 +1,10 @@
 extends ../layouts/default
-
+include ../components/info-block/info-block
+include ../components/modal/modal
 block head
-    -pageSettings.title = 'Главная'; 
+	-pageSettings.title = 'Гла';
 
 block content
-    // Контент здесь
+	+info-block()
+	+modal()
+	+b.overlay
